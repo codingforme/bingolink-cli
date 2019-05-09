@@ -1,29 +1,30 @@
 {
-  "name": "bui-weex-toolkit",
-  "version": "1.2.1",
-  "description": "bui-weex命令行工具，帮助开发人员快速创建bui-weex项目工程",
+  "name": "bingolink-cli",
+  "version": "0.0.1",
+  "description": "bingolink命令行工具，帮助开发人员快速创建bingolink项目工程",
   "main": "index.js",
   "scripts": {},
-  "author": "余龙生 <yulsh@bingosoft.net>",
+  "author": "lufeng@bingosoft.net",
   "license": "Apache 2.0",
   "bin": {
-    "bui-weex": "./cli.js"
+    "bingolink": "./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bingo-oss/bui-weex-toolkit.git"
+    "url": "https://github.com/codingforme/bingolink-cli.git"
   },
   "keywords": [
     "cli"
   ],
   "bugs": {
-    "url": "https://github.com/bingo-oss/bui-weex-toolkit/issues"
+    "url": "https://github.com/codingforme/bingolink-cli/issues"
   },
-  "homepage": "https://github.com/bingo-oss/bui-weex-toolkit",
+  "homepage": "https://github.com/codingforme/bingolink-cli",
   "dependencies": {
     "chalk": "^1.1.3",
     "decompress": "^4.2.0",
     "fs-extra": "^3.0.1",
+    "inquirer": "^6.3.1",
     "jsonfile": "^3.0.0",
     "request": "^2.81.0",
     "tmp": "^0.0.33",
