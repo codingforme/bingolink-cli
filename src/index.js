@@ -9,6 +9,7 @@ var args = yargs
         desc: "Create a bingolink template.",
         builder: {},
         handler: function(argv) {
+            var projectName = argv.name;
             //1.获取模板列表
             info.getTemplates(function(templates){
                 //2.设置选项
@@ -23,7 +24,15 @@ var args = yargs
                             var tag = tags.find((tag) => {
                                 return tag.name == tagName;
                             });
-                            console.log(tag)
+                            //5.项目信息输入
+                            info.showProjectInputView(projectName, (project) => {
+                                projectName = project.project_name;
+                                //6.下载zip_ball，并复制到目标位置
+                                info.downloadZipball(tag.zipUrl, projectName, () => {
+                                    //7.修改项目的信息
+                                    info.editProjectInfo(project);
+                                })
+                            })
                         })
                     })
                 })
