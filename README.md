@@ -2,8 +2,6 @@
 
 > bingolink-cli 是 创建 bingolink 产品工程模板的命令行工具
 
-# 命令行使用
-
 ## 安装
 
 ```bash
