@@ -12,8 +12,8 @@ module.exports = {
                 console.log(err);
                 return;
             }
-            let info = JSON.parse(result);
-            let temps = [];
+            var info = JSON.parse(result);
+            var temps = [];
             info.forEach(function(p) {
                 temps.push({
                     name: p.name,
@@ -47,8 +47,8 @@ module.exports = {
                 console.log(err);
                 return;
             }
-            let info = JSON.parse(result);
-            let tags = [];
+            var info = JSON.parse(result);
+            var tags = [];
             info.forEach(function(p) {
                 tags.push({
                     name: p.name,
@@ -115,9 +115,9 @@ module.exports = {
     },
     //修改项目的信息
     editProjectInfo(project){
-        let jsonPath = path.join(project.project_name, 'package.json');
+        var jsonPath = path.join(project.project_name, 'package.json');
         try {
-            let j = jsonfile.readFileSync(jsonPath);
+            var j = jsonfile.readFileSync(jsonPath);
             j.name = project.project_name;
             j.description = project.project_description;
             j.author = project.author;

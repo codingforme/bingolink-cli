@@ -1,9 +1,9 @@
-const fs = require("fs-extra");
-const _fs = require('fs');
-const path = require("path");
-const decompress = require('decompress');
-const tmp = require('tmp');
-const request = require('request').defaults({
+var fs = require("fs-extra");
+var _fs = require('fs');
+var path = require("path");
+var decompress = require('decompress');
+var tmp = require('tmp');
+var request = require('request').defaults({
     headers: {
         'User-Agent': 'node request' // GitHub ask for this.
     }
@@ -31,9 +31,9 @@ module.exports = {
      */
     downloadAndUnzip(url, savePath, cb) {
         console.log("Trying to download template...");
-        const TMP_DOWNLOAD_PATH = tmp.tmpNameSync() + ".zip";
-        const TMP_UNZIP_FOLDER = tmp.tmpNameSync();
-        let file = fs.createWriteStream(TMP_DOWNLOAD_PATH);
+        var TMP_DOWNLOAD_PATH = tmp.tmpNameSync() + ".zip";
+        var TMP_UNZIP_FOLDER = tmp.tmpNameSync();
+        var file = fs.createWriteStream(TMP_DOWNLOAD_PATH);
         file.on("close", () => {
             console.log("Extracting...");
             decompress(TMP_DOWNLOAD_PATH, TMP_UNZIP_FOLDER).then(() => {

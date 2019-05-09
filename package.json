@@ -2,7 +2,6 @@
   "name": "bingolink-cli",
   "version": "0.0.1",
   "description": "bingolink命令行工具，帮助开发人员快速创建bingolink项目工程",
-  "main": "index.js",
   "scripts": {},
   "author": "lufeng@bingosoft.net",
   "license": "Apache 2.0",
