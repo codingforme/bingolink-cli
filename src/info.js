@@ -9,7 +9,7 @@ module.exports = {
     getTemplates(callback){
         util.get(config.organization_repositories_url, function(err, result){
             if(err){
-                console.log(err);
+                util.showErrorText(err);
                 return;
             }
             var info = JSON.parse(result);
@@ -44,7 +44,7 @@ module.exports = {
     getTags(url, callback){
         util.get(url, function(err, result){
             if(err){
-                console.log(err);
+                util.showErrorText(err);
                 return;
             }
             var info = JSON.parse(result);
@@ -122,9 +122,9 @@ module.exports = {
             j.description = project.project_description;
             j.author = project.author;
             jsonfile.writeFileSync(jsonPath, j, {spaces: 2});
-            console.log('All done!')
+            util.showInfoText('All done!')
         } catch (e) {
-            console.log(e);
+            util.showErrorText(e);
         }
     }
 }

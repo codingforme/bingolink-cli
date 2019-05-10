@@ -1,6 +1,6 @@
 {
   "name": "bingolink-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bingolink命令行工具，帮助开发人员快速创建bingolink项目工程",
   "scripts": {},
   "author": "lufeng@bingosoft.net",
